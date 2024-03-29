@@ -44,7 +44,6 @@ public class Main {
             if (element.length() == 1) {
                 if (element.equals("m") || element.equals("f")) {
                     mapContact.put("gender",element);
-//                    String gender = element;
                 } else throw new GenderFormatException();
             }
             else {
@@ -57,7 +56,6 @@ public class Main {
                         throw new RuntimeException(e);
                     }
                     String[] arrayDate = element.split("\\.");
-//                        boolean flag = false;
                     if (Integer.parseInt(arrayDate[0]) < 0 ||
                             Integer.parseInt(arrayDate[0]) > 31 ||
                             Integer.parseInt(arrayDate[1]) < 0 ||
@@ -98,15 +96,6 @@ public class Main {
         }
         return mapContact;
     }
-//    FileWriter fileWriter = null;
-//        try {
-//        fileWriter = new FileWriter(contactTypes() + ".txt", true);
-//        fileWriter.write(thename + " " + name + " " + secondname + " " + birthdate + " " + phonenumber + " " + gender + "\n");
-//        fileWriter.close();
-//    } catch (IOException e) {
-//        throw new RuntimeException(e);
-//    }
-}
 
 class DateFormatException extends RuntimeException{
         public DateFormatException(){
